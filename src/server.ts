@@ -1,12 +1,13 @@
 import http from 'http';
 import dotenv from 'dotenv';
+import { requestListener } from './routes';
 
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
 const createServer = async () => {
-  const server = http.createServer();
+  const server = http.createServer(requestListener);
 
   return server;
 };
