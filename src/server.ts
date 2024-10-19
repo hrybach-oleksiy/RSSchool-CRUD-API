@@ -6,7 +6,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-const createServer = async () => {
+export const createServer = async () => {
   const server = http.createServer(requestListener);
 
   return server;
